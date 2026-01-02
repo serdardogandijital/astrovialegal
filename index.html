@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astrovia - Hukuki Belgeler</title>
+    <style>
+      :root {
+        --bg: #0b1021;
+        --card: #121931;
+        --text: #e8ecff;
+        --muted: #9fb2e1;
+        --accent: #7c5dff;
+        --accent-2: #4fd1c5;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at 20% 20%, #182348, #0b1021 50%),
+          radial-gradient(circle at 80% 0%, #1a274f, transparent 45%),
+          var(--bg);
+        color: var(--text);
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+      }
+      .container {
+        width: min(960px, 100%);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 32px;
+        box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(6px);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        padding: 16px;
+        transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+        text-decoration: none;
+        color: var(--text);
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(124, 93, 255, 0.5);
+        box-shadow: 0 8px 30px rgba(124, 93, 255, 0.15);
+      }
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.45;
+        font-size: 14px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(124, 93, 255, 0.12);
+        color: var(--text);
+        border: 1px solid rgba(124, 93, 255, 0.3);
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+      .chip span {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        box-shadow: 0 0 0 4px rgba(124, 93, 255, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="chip"><span></span>Hukuki ve Destek Sayfaları</div>
+      <h1>Astrovia Bilgilendirme</h1>
+      <p>
+        Gizlilik, kullanım şartları, hesap silme ve destek süreçlerine dair güncel
+        belgelerimize aşağıdaki bağlantılardan ulaşabilirsiniz.
+      </p>
+      <div class="grid">
+        <a class="card" href="/privacy">
+          <h2>Gizlilik Politikası</h2>
+          <p>Verilerinizin işlenmesi, saklanması ve haklarınıza dair bilgiler.</p>
+        </a>
+        <a class="card" href="/terms">
+          <h2>Kullanım Şartları</h2>
+          <p>Platform kullanım koşulları, yükümlülükler ve sorumluluk sınırları.</p>
+        </a>
+        <a class="card" href="/account-deletion">
+          <h2>Hesap Silme</h2>
+          <p>Hesap kapatma ve veri silme/anonimleştirme süreçleri.</p>
+        </a>
+        <a class="card" href="/support">
+          <h2>Destek ve İletişim</h2>
+          <p>Destek kanalları, çalışma saatleri ve sık sorulan sorular.</p>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
